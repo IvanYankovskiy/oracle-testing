@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/OAST
+    username: app
+    password: app_pass
+    hikari:
+      schema: app
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: db/changelog/db.changelog-root.yml
+    liquibase-schema: app
